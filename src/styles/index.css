@@ -18,10 +18,23 @@ body {
     background-color: var(--bg-dark);
 }
 
-#website_name {
+.navbar {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-top: 1.5rem;
+    margin-left: 2rem;
+    gap: 10px;
+    
+}
+
+#name {
+    flex: auto;
+    margin-right: 20rem;
     color: var(--text);
 }
 
-.website_nav {
+.nav {
+    flex: auto;
     color: var(--text);
 }
