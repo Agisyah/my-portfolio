@@ -1,9 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
 :root {
     --bg-dark: hsl(0 0% 0%);
     --bg: hsl(0 0% 5%);
     --bg-light: hsl(0 0% 10%);
     --text: hsl(0 0% 95%);
     --text-muted: hsl(0 0% 70%);
+    --emerald: oklch(76.5% 0.177 163.223);
 }
 
 body.light {
@@ -16,25 +19,55 @@ body.light {
 
 body {
     background-color: var(--bg-dark);
+    font-family: "Rubik", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+}
+
+a {
+    text-decoration: none;
 }
 
 .navbar {
     display: flex;
+    flex: auto;
     flex-direction: row;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: center;
     margin-top: 1.5rem;
     margin-left: 2rem;
-    gap: 10px;
+    margin-right: 2rem;
+    gap: 4rem;
     
 }
 
 #name {
-    flex: auto;
-    margin-right: 20rem;
+    justify-content: flex-start;
+    margin-right: 29rem;
     color: var(--text);
+    font-weight: 800;
 }
 
 .nav {
-    flex: auto;
+    justify-content: space-evenly;
     color: var(--text);
+    font-weight: 500;
+}
+
+.nav:hover {
+    color: var(--emerald);
+    transition-duration: 0.3s;
+}
+
+#settings {
+    fill: var(--text);
+    height: 1.75rem;
+    width: auto;
+}
+
+#settings:hover{
+    fill: var(--emerald);
+    transition-duration: 0.3s;
 }
