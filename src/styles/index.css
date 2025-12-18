@@ -33,7 +33,7 @@ a {
     display: flex;
     flex: auto;
     flex-direction: row;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
     justify-content: flex-start;
     align-items: center;
     margin-top: 1.5rem;
@@ -45,7 +45,7 @@ a {
 
 #name {
     justify-content: flex-start;
-    margin-right: 29rem;
+    margin-right: 35.5rem;
     color: var(--text);
     font-weight: 800;
 }
@@ -70,4 +70,8 @@ a {
 #settings:hover{
     fill: var(--emerald);
     transition-duration: 0.3s;
+}
+
+.h1 {
+    color: var(--text-muted);
 }
