@@ -75,3 +75,13 @@ a {
 .h1 {
     color: var(--text-muted);
 }
+
+.download {
+    color: var(--text);
+    background-color: var(--emerald);
+    height: 50px;
+    width: 150px;
+    border: none;
+    border-radius: 15px;
+    font-weight: 800;
+}
