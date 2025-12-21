@@ -8,13 +8,13 @@ Feel free to give any constructive criticism if you somehow saw my unknown proje
 
 Logbook:\
 **December 16th 2025**\
-"my-portfolio" was first created and uploaded to GitHub
+"my-portfolio" was first created and uploaded to GitHub\
 
 **December 20th 2025**\
-Updated version control semantics into "Version alpha-(major update).(minor update).(bug patches)"
+Updated version control semantics into "Version alpha-(major update).(minor update).(bug patches)"\
 (e.g. Version alpha-1.1.1)
 
-**December 21st 2025**\
+**December 21st 2025**
 1. Updated version control semantics into "v(major update).(minor update).(bug patches)"
 (e.g. v1.1.1)
 2. Changed and restarted the semantic versioning to "v1.0.0" following GitHub's release notes feature that I just found out how to use lol
