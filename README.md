@@ -13,3 +13,8 @@ Logbook:
 **December 20th 2025**
 Updated version control semantics into "Version alpha-(major update).(minor update).(bug patches)"
 (e.g. Version alpha-1.1.1)
+
+**December 21st 2025**
+1. Updated version control semantics into "v(major update).(minor update).(bug patches)"
+(e.g. v1.1.1)
+2. Changed and restarted the semantic versioning to "v1.0.0" following GitHub's release notes feature that I just found out how to use lol
