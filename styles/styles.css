@@ -1,0 +1,85 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    /*Colors*/
+    --primary: hsl(161, 100%, 42%);
+    --secondary: hsl(281, 100%, 42%);
+    --tertiary: hsl(41, 100%, 42%);
+
+    --bg-dark: hsl(235, 5%, 0%);
+    --bg: hsl(235, 5%, 5%);
+    --bg-light: hsl(235, 5%, 10%);
+
+    --text: hsl(0, 5%, 95%);
+    --text-muted: hsl(0, 5%, 70%);
+
+    /*Typography*/
+    --font: "Rubik", sans-serif;
+
+    --h1: 700 5.61rem var(--font);
+    --h2: 700 4.209rem var(--font);
+    --h3: 700 3.175rem var(--font);
+    /*--h4: 2.369rem;
+    --h5: 1.777rem;
+    --h6: 1.333rem;*/
+    --p: 400 1rem var(--font);
+    --small: 400 0.75rem var(--font);
+    --tiny: 400 0.563rem var(--font);
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    display: grid;
+    text-wrap: balance;
+    font: var(--p);
+    background: var(--bg);
+    color: var(--text);
+}
+
+body.light {
+    --primary: hsl(161, 100%, 58%);
+    --secondary: hsl(281, 100%, 58%);
+    --tertiary: hsl(41, 100%, 58%);
+
+    --bg-dark: hsl(235, 5%, 90%);
+    --bg: hsl(235, 5%, 95%);
+    --bg-light: hsl(235, 5%, 100%);
+
+    --text: hsl(235, 5%, 5%);
+    --text-muted: hsl(235, 5%, 30%);
+}
+
+h1 {
+    font: var(--h1);
+}
+
+h2 {
+    font: var(--h1);
+}
+
+h3 {
+   font: var(--h1); 
+}
+
+a {
+    color: var(--text);
+    text-decoration: none;
+}
+
+a:hover {
+    color: var(--primary);
+}
+
+ul {
+    list-style: none;
+}
+
+.nav {
+    font-weight: 500;
+}
