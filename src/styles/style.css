@@ -78,6 +78,11 @@ body.light {
     background-color: var(--text);
 }
 
+::-webkit-scrollbar-thumb:hover {
+    background-color: var(--text-muted);
+    transition: 0.3s;
+}
+
 h1 {
     font: var(--h1);
 }
@@ -115,7 +120,7 @@ button {
     border-radius: 1rem;
 }
 
-svg {
+svg, img {
     color: var(--text);
     height: 5rem;
     width: 5rem;
@@ -376,12 +381,6 @@ header #hero {
     margin: 0 18.5rem 0 10rem;
 }
 
-#skills {
-    display: flex;
-    height: 480px;
-    width: 100%;
-}
-
 .card-1 svg {
     color: var(--primary);
 }
@@ -392,4 +391,39 @@ header #hero {
 
 .card-3 svg {
     color: var(--tertiary);
+}
+
+#skills {
+    display: flex;
+    flex-direction: column;
+    justify-content: top;
+    align-items: center;
+    text-align: center;
+    height: 1080px;
+    width: 100%;
+    margin-top: 10rem;
+    gap: 2rem;
+}
+
+#skills .card-container {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1100px;
+    gap: 2rem;
+}
+
+#skills .card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 1.5rem;
+    padding: 0 1rem 0;
+    height: 200px;
+    width: 180px;
+    background-color: var(--bg-light);
+    border: none;
+    border-radius: 5px;
+    box-shadow: var(--shadow3);
 }

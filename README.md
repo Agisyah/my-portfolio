@@ -20,6 +20,6 @@ Updated version control semantics into "Version alpha-(major update).(minor upda
 2. Changed and restarted the semantic versioning to "v1.0.0" following GitHub's release notes feature that I just found out how to use lol
 
 **December 26th 2025**\
-Decided to change most of my websites into component-based and it created major changes to the CSS structure and others.\
+Decided to change most of my websites into component-based and it created major changes to the CSS structure and others.
 
 P.S. I might move this kinds of stuff into an actual blog, after I know when to make time to make my own blog or something. I don't think I should treat my README.md like this -_-
