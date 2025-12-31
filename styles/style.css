@@ -1,0 +1,395 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    /*Colors*/
+    --primary: hsl(161, 100%, 42%);
+    --secondary: hsl(281, 100%, 42%);
+    --tertiary: hsl(41, 100%, 42%);
+
+    --bg-dark: oklch(4% 0.042 264.695);
+    --bg: oklch(8% 0.042 264.695);
+    --bg-light: oklch(12% 0.042 264.695);
+
+    --text: hsl(0, 5%, 95%);
+    --text-muted: hsl(0, 5%, 70%);
+
+    --shadow1: 
+    inset 0 1px 2px #ffffff30,
+    0 1px 2px #00000030,
+    0 2px 4px #00000015;
+    --shadow2: 
+    inset 0 1px 2px #ffffff50,
+    0 2px 4px #00000030,
+    0 4px 8px #00000015;
+    --shadow3: 
+    inset 0 1px 2px #ffffff70,
+    0 4px 6px #00000030,
+    0 6px 10px #00000015;;
+
+    /*Typography*/
+    --font: "Rubik", sans-serif;
+
+    --h1: 700 5.61rem var(--font);
+    --h2: 700 4.209rem var(--font);
+    --h3: 700 3.175rem var(--font);
+    --p: 400 1rem var(--font);
+    --small: 400 0.75rem var(--font);
+    --tiny: 400 0.563rem var(--font);
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    display: grid;
+    text-wrap: balance;
+    font: var(--p);
+    background: var(--bg);
+    color: var(--text);
+    overflow-x: hidden;
+}
+
+body.light {
+    --primary: hsl(161, 100%, 58%);
+    --secondary: hsl(281, 100%, 58%);
+    --tertiary: hsl(41, 100%, 58%);
+
+    --bg-dark: hsl(235, 5%, 90%);
+    --bg: hsl(235, 5%, 95%);
+    --bg-light: hsl(235, 5%, 100%);
+
+    --text: hsl(235, 5%, 5%);
+    --text-muted: hsl(235, 5%, 30%);
+}
+
+::-webkit-scrollbar {
+    width: auto;
+}
+
+::-webkit-scrollbar-track {
+    background-color: none;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: var(--text);
+}
+
+h1 {
+    font: var(--h1);
+}
+
+h2 {
+    font: var(--h2);
+}
+
+h3 {
+   font: var(--h3); 
+}
+
+a {
+    color: var(--text);
+    text-decoration: none;
+}
+
+a:hover {
+    color: var(--primary);
+}
+
+p {
+    color: var(--text-muted);
+}
+
+button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--text);
+    font: var(--p);
+    height: 4rem;
+    width: 12rem;
+    border-radius: 1rem;
+}
+
+svg {
+    color: var(--text);
+    height: 5rem;
+    width: 5rem;
+}
+
+ul {
+    list-style: none;
+}
+
+button {
+    color: var(--text);
+    background-color: var(--bg-light);
+    border: none;
+    font-weight: 500;
+}
+
+
+.card-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 5rem;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 1.5rem;
+    padding: 0 1rem 0;
+    height: 250px;
+    width: 220px;
+    background-color: var(--bg-light);
+    border: none;
+    border-radius: 5px;
+    box-shadow: var(--shadow3);
+}
+
+.card p {
+    color: var(--text);
+    font-weight: 700;
+}
+
+header {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: 92px 628px;
+    height: 720px;
+}
+
+header .navbar {
+    grid-column: 1 / 1;
+    grid-row: 1 / 1;
+}
+
+header #hero {
+    grid-column: 1 / 2;
+    grid-row: 2 / 2;
+}
+
+.navbar {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    z-index: 1;
+    height: 3.75rem;
+    width: 95rem;
+    max-width: 1500px;
+    margin: 0 1rem 1rem 0;
+    padding-left: 0.5rem;
+    padding-right: 0.25rem;
+    background-color: var(--bg);
+    font-weight: 500;
+    border: none;
+    /*border-radius: 0.5rem;
+    box-shadow: var(--shadow1);*/
+}
+
+.navbar ul {
+    display: flex;
+    gap: 1rem;
+}
+
+.navbar li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 3.125rem;
+    width: 10rem;
+    max-width: 100%;
+    border-radius: 0.5rem;
+}
+
+.navbar li:focus {
+    background-color: var(--primary);
+    color: var(--text);
+    transition: 0.3s ease-out;
+}
+
+#logo {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-right: 2.5rem;
+    font: 1.333rem var(--font);
+}
+
+#logo img {
+    height: 2.25rem;
+    width: 2.25rem;
+}
+
+#logo p {
+    color: var(--text);
+    font-weight: 800;
+    margin-left: 0.5rem;
+}
+
+#settings {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    height: 3.75rem;
+    width: 3.75rem;
+    margin-left: 11rem;
+    border: none;
+    border-radius: 0.5rem;
+}
+
+#settings button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    width: 50px;
+    border: none;
+    border-radius: 0.5rem;
+    background-color: var(--bg);
+    anchor-name: --settings-button;
+}
+
+#settings button:focus{
+    background-color: var(--primary);
+    color: var(--text);
+    transition: 0.3s ease-out;
+}
+
+#settings svg {
+    height: 2rem;
+    width: 2rem;
+}
+
+#settings svg:hover {
+    color: var(--primary);
+}
+
+#settings-menu {
+    position: absolute;
+    position-anchor: settings-button;
+    position-area: bottom left;
+    height: auto;
+    width: 120px;
+    background-color: var(--bg-light);
+    border: none;
+    border-radius: 0.5rem;
+}
+
+#settings-menu:popover-open {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 0.5rem;
+}
+
+#hero {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-rows: auto;
+    justify-content: center;
+    align-items: top;
+}
+
+#hero div {
+    grid-column:  2 / 3;
+    grid-row:  1 / 2;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 2rem;
+}
+
+.span-1 {
+    color: var(--secondary);
+}
+
+.span-2 {
+    color: var(--tertiary);
+}
+
+.span-3 {
+    color: var(--primary);
+}
+
+#hero #hero-button {
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    bottom: 1rem;
+    margin: 0;
+    gap: 1rem;
+    
+}
+
+#hero-button #btn1 {
+    background-color: var(--primary);
+}
+
+#hero-button #btn1:hover, #btn2:hover {
+    background-color: var(--text-muted);
+    transition: 0.2s ease-in-out;
+}
+
+#hero svg {
+    height: 26rem;
+    width: 26rem;
+}
+
+#hero button svg {
+    height: 1.5rem;
+    width: 1.5rem;
+}
+
+#about {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: 
+    "box-1 box-1 box-1"
+    "box-2 box-2 box-2";
+    height: 560px;
+    width: 100%;
+}
+
+#about #about-me {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    text-align: justify;
+    margin: 0 18.5rem 0 10rem;
+}
+
+#skills {
+    display: flex;
+    height: 480px;
+    width: 100%;
+}
+
+.card-1 svg {
+    color: var(--primary);
+}
+
+.card-2 svg {
+    color: var(--secondary);
+}
+
+.card-3 svg {
+    color: var(--tertiary);
+}
