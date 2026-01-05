@@ -9,9 +9,9 @@
     --secondary: hsl(281, 100%, 42%);
     --tertiary: hsl(41, 100%, 42%);
 
-    --bg-dark: oklch(4% 0.042 264.695);
-    --bg: oklch(8% 0.042 264.695);
-    --bg-light: oklch(12% 0.042 264.695);
+    --bg-dark: oklch(2% 0.042 264.695);
+    --bg: oklch(7% 0.042 264.695);
+    --bg-light: oklch(9% 0.042 264.695);
 
     --text: hsl(0, 5%, 95%);
     --text-muted: hsl(0, 5%, 70%);
@@ -40,23 +40,10 @@
     --tiny: 400 0.563rem var(--font);
 }
 
-html {
-    scroll-behavior: smooth;
-}
-
-body {
-    display: grid;
-    text-wrap: balance;
-    font: var(--p);
-    background: var(--bg);
-    color: var(--text);
-    overflow-x: hidden;
-}
-
-body.light {
-    --primary: hsl(161, 100%, 58%);
-    --secondary: hsl(281, 100%, 58%);
-    --tertiary: hsl(41, 100%, 58%);
+.light {
+    --primary: hsl(160.93, 100%, 58.04%);
+    --secondary: hsl(280.93, 100%, 58.04%);
+    --tertiary: hsl(40.93, 100%, 58.04%);
 
     --bg-dark: hsl(235, 5%, 90%);
     --bg: hsl(235, 5%, 95%);
@@ -64,6 +51,20 @@ body.light {
 
     --text: hsl(235, 5%, 5%);
     --text-muted: hsl(235, 5%, 30%);
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    display: grid;
+    gap: 20rem;
+    text-wrap: balance;
+    font: var(--p);
+    background: var(--bg);
+    color: var(--text);
+    overflow-x: hidden;
 }
 
 ::-webkit-scrollbar {
@@ -96,28 +97,22 @@ h3 {
 }
 
 a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
     color: var(--text);
     text-decoration: none;
 }
 
-a:hover {
+a:not(.focused):hover {
     color: var(--primary);
+    transition: 0.2s ease-out;
 }
 
 p {
     color: var(--text-muted);
-}
-
-button {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 0.5rem;
-    color: var(--text);
-    font: var(--p);
-    height: 4rem;
-    width: 12rem;
-    border-radius: 1rem;
 }
 
 svg, img {
@@ -131,10 +126,23 @@ ul {
 }
 
 button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     color: var(--text);
     background-color: var(--bg-light);
     border: none;
+    height: 4rem;
+    width: 12rem;
+    font: var(--p);
     font-weight: 500;
+}
+
+button:hover {
+    cursor: pointer;
+    background-color: var(--primary);
+    border-radius: 0;
+    transition: 0.2s ease-out;
 }
 
 
@@ -160,6 +168,12 @@ button {
     border: none;
     border-radius: 5px;
     box-shadow: var(--shadow3);
+}
+
+.card:hover {
+    background-color: var(--text-muted);
+    scale: 1.15;
+    transition: 0.3s ease-out;
 }
 
 .card p {
@@ -221,13 +235,19 @@ header #hero {
     border-radius: 0.5rem;
 }
 
-.navbar li:focus {
+#focus {
+    position: fixed;
+    z-index: -1;
+    height: 3.125rem;
+    width: 10rem;
+    max-width: 100%;
+    border-radius: 0.5rem;
     background-color: var(--primary);
-    color: var(--text);
-    transition: 0.3s ease-out;
+    transform: translateX(0px);
+    transition: 0.3s ease;
 }
 
-#logo {
+#logo-container {
     display: flex;
     justify-content: flex-start;
     align-items: center;
@@ -235,12 +255,12 @@ header #hero {
     font: 1.333rem var(--font);
 }
 
-#logo img {
+#logo-container #logo {
     height: 2.25rem;
     width: 2.25rem;
 }
 
-#logo p {
+#logo-container p {
     color: var(--text);
     font-weight: 800;
     margin-left: 0.5rem;
@@ -285,11 +305,9 @@ header #hero {
 }
 
 #settings-menu {
-    position: absolute;
+    position: fixed;
     position-anchor: settings-button;
     position-area: bottom left;
-    height: auto;
-    width: 120px;
     background-color: var(--bg-light);
     border: none;
     border-radius: 0.5rem;
@@ -344,6 +362,13 @@ header #hero {
 
 #hero-button #btn1 {
     background-color: var(--primary);
+    gap: 0.5rem;
+    border-radius: 1rem;
+}
+
+#hero-button #btn2 {
+    gap: 0.5rem;
+    border-radius: 1rem;
 }
 
 #hero-button #btn1:hover, #btn2:hover {
@@ -361,6 +386,11 @@ header #hero {
     width: 1.5rem;
 }
 
+main {
+    display: grid;
+    gap: 20rem;
+}
+
 #about {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -368,8 +398,10 @@ header #hero {
     grid-template-areas: 
     "box-1 box-1 box-1"
     "box-2 box-2 box-2";
-    height: 560px;
+    height: 520px;
     width: 100%;
+    margin: 0;
+    scroll-margin-top: 60px;
 }
 
 #about #about-me {
@@ -399,9 +431,10 @@ header #hero {
     justify-content: top;
     align-items: center;
     text-align: center;
-    height: 1080px;
+    height: 816px;
     width: 100%;
-    margin-top: 10rem;
+    margin-top: 0;
+    scroll-margin-top: 60px;
     gap: 2rem;
 }
 
@@ -426,4 +459,10 @@ header #hero {
     border: none;
     border-radius: 5px;
     box-shadow: var(--shadow3);
+}
+
+#skills .card:hover {
+    background-color: var(--tertiary);
+    scale: 1.1;
+    transition: 0.3s ease-out;
 }

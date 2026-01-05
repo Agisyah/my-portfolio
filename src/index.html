@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Agio Sudarmansyah</title>
+    <link rel="icon" type="image/x-icon" href="../public/image/favicon.ico">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -12,19 +13,20 @@
     <link rel="stylesheet" href="styles/style.css">
 </head>
 <body>
-    <header>
+    <header id="home">
         <nav class="navbar">
             <ul>
-                <li id="logo">
-                    <img src="public/image/logo.png" alt="Website Logo">
+                <li id="logo-container">
+                    <img id="logo"src="../public/image/logo.png" alt="Website Logo">
                     <p>AGIO</p>
                 </li>
-                <li tabindex="0"><a>Home</a></li>
-                <li tabindex="0"><a>About</a></li>
-                <li tabindex="0"><a>Skills</a></li>
-                <li tabindex="0"><a>Blog</a></li>
-                <li tabindex="0"><a>Projects</a></li>
-                <li tabindex="0"><a>Contact</a></li>
+                <div id="focus"></div>
+                <li><a href="#home" class="" id="home-button">Home</a></li>
+                <li><a href="#about" class="" id="about-button">About</a></li>
+                <li><a href="#skills" class="" id="skills-button">Skills</a></li>
+                <li><a href="#projects" class="" id="projects-button">Projects</a></li>
+                <li><a href="#blog" class="" id="blog-button">Blog</a></li>
+                <li><a href="#contact" class="" id="contact-button">Contact</a></li>
             </ul>
             <div id="settings">
                 <button popovertarget="settings-menu">
@@ -32,8 +34,8 @@
                 </button>
             </div>
                 <div id="settings-menu" popover>
-                    <a href="">Theme</a>
-                    <a href="">Language</a>
+                    <button id="theme">Theme</button>
+                    <button id="language">Language</button>
                 </div>
             </div>
         </nav>
@@ -74,7 +76,7 @@
             </div>
         </section>
         <section id="skills">
-            <h1 style="grid-area: box-1;">My Skills</h1>
+            <h1 style="grid-area: box-1;">Skills</h1>
             <div class="card-container" style="grid-area: box-2;">
                 <div class="card">
                     <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100" height="100" viewBox="0 0 48 48">
@@ -180,12 +182,12 @@
                 </div>
             </div>
         </section>
-        <section id="blog"></section>
         <section id="projects"></section>
-        <section id="contact"></section>
+        <section id="blog"></section>
+        <section id="contact"></section><a></a>
     </main>
     <footer></footer>
 
-    <script src="main.js"></script>
+    <script type="module" src="app.js" defer></script>
 </body>
 </html>
